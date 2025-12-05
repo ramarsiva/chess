@@ -1,0 +1,151 @@
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f7f9fc;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+input {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled button styles */
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Game container layout */
+.game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+
+.players-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 20px 0;
+}
+
+.player-box {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-width: 250px;
+}
+
+.available-games {
+  margin-top: 20px;
+}
+
+/* Chessboard */
+#board1 {
+  width: 450px;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+
+/* Disable board if only one player */
+.board-disabled {
+  pointer-events: none !important;
+  opacity: 0.5;
+}
+
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-height: 400px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  min-height: 400px;
+}
+
+.chat-messages div {
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  font-size: 14px;
+}
+
+.game-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #board1 {
+    width: 90%;
+  }
+
+  .chat-container {
+    width: 90%;
+  }
+}
