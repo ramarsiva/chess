@@ -86,6 +86,16 @@ button:disabled {
   width: 450px;
   transition: 0.3s;
   pointer-events: auto;
+  touch-action: none;
+  -ms-touch-action: none;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+}
+
+.board-container {
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow: hidden; /* important for mobile */
 }
 
 /* Disable board if only one player */
