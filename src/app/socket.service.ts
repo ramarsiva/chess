@@ -6,7 +6,7 @@ export class SocketService {
   socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://chess-qosd.onrender.com');
   }
 
   createGame(playerName: string, callback: Function) {
